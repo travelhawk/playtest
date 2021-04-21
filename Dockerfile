@@ -4,7 +4,7 @@ COPY . /app
 WORKDIR /app
 RUN sbt dist
 RUN cd ./target/universal && \
-    unzip playtest-1.0-SNAPSHOT.zip 
+    unzip -o playtest-1.0-SNAPSHOT.zip
 
 # keep the build version
 FROM openjdk:jre-alpine
